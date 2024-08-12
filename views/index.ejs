@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" rel="stylesheet" type="text/css">
+    <title>Team USABC | Olympics Basketball Constructor</title>
+</head>
+<body>
+    <section>
+        <div class="cover-image">
+            <img src="images/teamusa.jpg" class="usalogo" alt="usalogo"></img>
+            <div class="text-overlay">
+                <h1>Team USABC</h1>
+                <p class="about">A Stat Based Team USA Roster Constructor</p>
+                <form id="year-form" method="post" action="/submit-form">
+                    <input type="number" id="year-input" pattern="\d{4}" maxlength="4" min="2008" max="2024" name="olympicyear" placeholder="Enter Year (2008 - Present)" required>
+                    <button class="search" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+        <% if (year) { %>
+        <section id="hidden-section">
+            <h1 id="title">Predicted Roster: <%= year %></h1>
+            <table>
+                <thead>
+                    <tr class="stat-names">
+                        <th id="player">Player</th>
+                        <th id="player-gp">GP</th>
+                        <th id="player-min">MIN</th>
+                        <th id="player-pts">PTS</th>
+                        <th id="player-rebs">REBS</th>
+                        <th id="player-ast">AST</th>
+                    </tr>
+                </thead>
+                <tbody id="player-data">
+                    <% players.forEach(player => { %>
+                    <tr>
+                        <td><%= player.Player %></td>
+                        <td><%= player.GP %></td>
+                        <td><%= player.MIN %></td>
+                        <td><%= player.PTS %></td>
+                        <td><%= player.REB %></td>
+                        <td><%= player.AST %></td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>
+    </section>
+    <% } else { %>
+        <section>
+            <div class="second-row">
+                <img src="images/teamusa2024.jpg" class="team-pic" alt="teampic"></img>
+                <div class="about-info">
+                    <h2>What is Team USABP?</h2>
+                    <p class="description"> Team USABC (Constructor) is a project that attempts to accurately construct what every single basketball roster would be for each year since available data be used (2010). It takes in the highest PER players that meet the games played and minute requirements to construct a roster.</p>
+                </div>
+            </div>
+        </section>
+    <% } %>
+    <section>
+        <div class="rules">
+            <h3>RULES/RESTRICTIONS</h3>
+            <p>1. Player must be American (Born in U.S.)<br>
+                2. Play at Least 60 Games and 30 MPG <br>
+                3. Based off previous season stats
+            </p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

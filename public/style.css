@@ -1,0 +1,201 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/8d/fc/54/8dfc5402d21c31971aa3879fbf5a0bf2.png");
+    font-family: monospace;
+    padding: 20px;
+    padding-bottom: 15%;
+    background-color: bisque;
+    transition: ease 2s;
+}
+
+.usalogo {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.cover-image {
+    position: relative;
+    width: 1200px;
+    height: 450px;
+    margin: auto;
+    padding: 40px;
+    
+}
+
+.text-overlay {
+    position: absolute;
+    top: 45%;
+    transform: translate(-20%, -50%); /* Center the text horizontally and vertically */
+    text-align: center;
+    color: white;
+    width: 100%; /* Ensure the text container spans the full width of the image */
+    
+}
+
+.text-overlay .about {
+    font-size: 18pt;
+}
+h1 {
+    font-size: 35pt;
+}
+
+.text-overlay p {
+    font-size: 14pt;
+}
+
+.text-overlay input, .search {
+    font-size: 20pt;
+    padding: auto;
+    transform: translate(0%, 100%);
+    transition: 0.8s ease;
+    padding: .5%;
+}
+
+.search {
+    cursor: pointer;
+    transition: 0.4 ease;
+    background-color: #e9194d;
+    color: white;
+    border-color: black;
+}
+
+.search:hover {
+    background-color: darkred;
+}
+
+.text-overlay input {
+    width: 350px;
+    border-radius: 50px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 25pt;
+}
+
+.about-info {
+    margin: auto;
+    border: 5px solid;
+    background-color: whitesmoke;
+    word-wrap: break-word;
+    font-size: 15pt;
+    width: 36.5%;
+    padding: 2%;
+    text-align: center;
+    outline-color: black;
+    font-weight: bold;
+}
+
+.team-pic {
+    width: 50%;
+    height: 50%;
+    border: 5px solid;
+    margin: auto;
+}
+
+.second-row {
+    display: flex;
+    padding: 4%;
+    border: 5px solid;
+    background-color: #e9194d;
+    width: 78%;
+    margin: auto;
+    transform: translateY(40px);
+    transition: opacity 0.3s ease;
+    opacity: 100%;
+
+}
+.rules {
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid;
+    position: relative;
+    background-color: bisque;
+    margin: auto;
+    border: 5px solid;
+    padding: 1%;
+    transform: translateY(150px);
+}
+
+#hidden-section h1{
+    font-size: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: 5px solid;
+    transform: translateY(-500px);
+    width: 60%;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: #89CFF0;
+    opacity: 100%;
+
+}
+
+table {
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    border: 5px solid;
+    transform: translateY(-450px);
+    width: 75%;
+    padding: 4%;
+    border-radius: 50px;
+    background-color: #89CFF0;
+    opacity: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+th {
+    padding: 30px;
+    text-align: center;
+
+}
+
+td {
+    padding: 2rem 15px 15px;
+    text-align: center;
+    position: relative;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tbody tr {
+    display: table-row;
+}
+
+td, th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.15rem;
+    background: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#hidden-section {
+    transform: translateY(520px);
+
+}
+
+body:has(section #hidden-section) {
+    display: block;
+}
